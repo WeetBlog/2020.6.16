@@ -5,10 +5,10 @@
       <div class="Header-text">活在当下，不问朝夕</div>
     </div>
     <div class="type-nav">
-      <el-button type="info" round>信息按钮</el-button>
-      <el-button type="info" round>信息按钮</el-button>
-      <el-button type="info" round>信息按钮</el-button>
-      <el-button type="info" round>信息按钮</el-button>
+      <el-button type="info" round><span>信息按钮</span></el-button>
+      <el-button type="info" round><span>信息按钮</span></el-button>
+      <el-button type="info" round><span>信息按钮</span></el-button>
+      <el-button type="info" round><span>信息按钮</span></el-button>
     </div>
     
   </div>
@@ -23,6 +23,18 @@ export default {};
 
 
 <style  lang ="less" scoped>
+@font-face {
+    font-family: sweet1;
+    src: url(./font/ZCOOLKuaiLe-Regular.ttf);
+}
+@font-face {
+    font-family: sweet2;
+    src: url(./font/ZCOOLXiaoWei-Regular.ttf);
+}
+@font-face {
+    font-family: sweet3;
+    src: url(./font/ZCOOLQingKeHuangYou-Regular.ttf);
+}
 .Header {
   height: 600px;
   position: relative;
@@ -38,20 +50,28 @@ export default {};
     img {
       width: 100%;
       border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     }
     .Header-text {
       margin-top: 20px;
       text-align: center;
       font-size: 20px;
+      font-family: sweet2;
+      color: #999;
     }
   }
   .type-nav{
     position: absolute;
-    width: 450px;
+    width: 429px;
     margin: 0 auto;
     bottom: 0;
     left: 0;
     right: 0;
+    span{
+      font-family: sweet1;
+    }
+    
+    
   }
 
 }

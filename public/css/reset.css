@@ -73,3 +73,13 @@ html { overflow-y: scroll; }
     clear: both;
     visibility: hidden;
 }
+
+@font-face {
+    font-family: sweet;
+    src: url(../font/ZCOOLKuaiLe-Regular.ttf);
+}
+
+.sweet{
+    font-family: sweet;
+    color: #333;
+}
