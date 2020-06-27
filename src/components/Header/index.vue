@@ -1,14 +1,14 @@
 <template>
   <div class="Header">
     <div class="Header-img">
-      <img src="./image/touxiang.jpg" alt />
-      <div class="Header-text">活在当下，不问朝夕</div>
+      <img :src="userInfo.imgUrl" alt />
+      <div class="Header-text">{{userInfo.motto}}</div>
     </div>
     <div class="type-nav">
-      <el-button type="info" round><span>信息按钮</span></el-button>
-      <el-button type="info" round><span>信息按钮</span></el-button>
-      <el-button type="info" round><span>信息按钮</span></el-button>
-      <el-button type="info" round><span>信息按钮</span></el-button>
+      <el-button type="info" round><router-link tag="span" to="/blogs">主页信息</router-link></el-button>
+      <el-button type="info" round><router-link tag="span" to="/favorite">个人爱好</router-link></el-button>
+      <el-button type="info" round><router-link tag="span" to="/user">博主信息</router-link></el-button>
+      <el-button type="info" round><router-link tag="span" to="/tiantian">后台管理</router-link></el-button>
     </div>
     
   </div>
@@ -17,7 +17,18 @@
 
 
 <script type="text/ecmascript-6">
-export default {};
+import {mapState} from 'vuex'
+
+export default {
+  computed: {
+    ...mapState({
+      userInfo : state => state.user.userInfo
+    })
+  },
+  mounted() {
+    this.$store.dispatch('getUserInfo')
+  },
+};
 </script>
 
 
@@ -62,7 +73,7 @@ export default {};
   }
   .type-nav{
     position: absolute;
-    width: 429px;
+    width: 440px;
     margin: 0 auto;
     bottom: 0;
     left: 0;
