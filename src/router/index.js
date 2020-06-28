@@ -31,7 +31,7 @@ VueRouter.prototype.replace = function(location,onComplete,onAbort){
 }
 
 const router = new VueRouter({
-    mode:'history',
+    mode:'hash',
     routes,
     scrollBehavior(to,from,savadPosition){
         return {x : 0 ,y : 0}
